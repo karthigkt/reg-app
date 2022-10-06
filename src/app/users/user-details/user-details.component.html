@@ -1,0 +1,18 @@
+<div class="table-container">
+    <table id="userTable" *ngIf="registeredUsers.length>0">
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Delete</th>
+        </tr>
+
+        <tr *ngFor="let user of registeredUsers; let i = index;">
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td class="address"><span>{{user.addresses[0].city}}</span><span>{{user.addresses[0].state}}</span><span>{{user.addresses[0].pincode}}</span></td>
+            <td><button class="delete-btn" (click)="deleteUser(i)">Delete</button></td>
+        </tr>
+    </table>
+    <p class="norecord-found" *ngIf="registeredUsers.length==0">No records found</p>
+</div>

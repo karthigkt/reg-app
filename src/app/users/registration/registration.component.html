@@ -1,0 +1,56 @@
+<div class="registration-form">
+
+    <form [formGroup]="registrationForm">
+        <!-- code form form array here -->
+        <div>
+            <label>User Name<span class="mandatory">*</span></label>
+            <input required type="text" class="form-control" formControlName="username" placeholder="user name" />
+            <span class="text-danger"
+                *ngIf="(registerFormControl.username.touched || isSubmitted) && registerFormControl.username.errors?.required">
+                UserName is required
+            </span>
+        </div>
+        <div>
+            <label>Email<span class="mandatory">*</span></label>
+            <input required type="email" class="form-control" formControlName="email" placeholder="email" />
+            <span class="text-danger"
+                *ngIf="(registerFormControl.email.touched || isSubmitted) && registerFormControl.email.errors?.required">
+                Email is required
+            </span>
+        </div>
+        <div formGroupName="addressForm">
+            <section formArrayName="addresses" *ngFor="let address of addressControls; let i = index;">
+                <div [formGroupName]="i">
+                    <div class="address-title">
+                        <input type="radio" id='default_{{i}}' name="def" value="def" formControlName="def"
+                            (click)="defaultClick(i)">
+                        <label for='default_{{i}}'>Address {{i + 1}} </label>
+                        <button type="button" class="delete-btn" (click)="deleteAddress(i)">Delete</button>
+                        <span class="default-error" *ngIf="isDefaultSelection && i==deleteInd">cannot delete selected
+                            address</span>
+                    </div>
+                    <div class="address-block">
+                        <div>
+                            <label>City</label>
+                            <input type="text" class="form-control" formControlName="city" placeholder="Bangalore" />
+                        </div>
+                        <div>
+                            <label>State</label>
+                            <input type="text" class="form-control" formControlName="state" placeholder="Karnataka" />
+                        </div>
+                        <div>
+                            <label>Pincode</label>
+                            <input type="number" class="form-control" formControlName="pincode" placeholder="540023" />
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </form>
+    <div class="footer">
+        <button type="button" class="addAddress-btn" (click)="addAddress('')">Add Address</button>
+        <button type="button" class="save-btn" (click)="saveForm()">Register User</button>
+        <span class="submit-success" *ngIf="isSuccess">Submitted Succeffuly!</span>
+    </div>
+</div>

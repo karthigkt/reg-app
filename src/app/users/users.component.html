@@ -1,0 +1,22 @@
+<div class="main-page">
+    <header><img class="logo" width="80px" src="../../assets/logo.png"/><span class="title">User Registration Page</span></header>
+    <div class="tabs">
+        <button class="first-tab" [ngClass]="showRegistration ? 'active-tab' : ''" type="button" (click)="showRegistration=true;userDetails=false">
+            Registration
+        </button>
+        <button *ngIf="role=='Admin'" [ngClass]="userDetails ? 'active-tab' : ''" (click)="showRegistration=false;userDetails=true">
+            User Details
+        </button>
+        <span class="role-class"><b>Role: {{role}}</b></span>
+    </div>
+    <div class="container">
+        <div *ngIf="showRegistration">
+
+          <app-registration></app-registration>  
+        </div>
+        <div *ngIf="userDetails">
+
+           <app-user-details></app-user-details>
+        </div>
+    </div>
+</div>

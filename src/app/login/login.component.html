@@ -1,0 +1,14 @@
+<form class="login-page">
+    <div>
+        <label for="user_name">Username</label>
+        <input type="text" placeholder="username" name="username" id="user_name" class="input-control"
+            [(ngModel)]="credentials.username" (ngModelChange)="onchange()">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" placeholder="password" name="password" id="password" class="input-control"
+            [(ngModel)]="credentials.password" (ngModelChange)="onchange()">
+    </div>
+    <span *ngIf="!isValidCredentials" class="error-msg">Please enter valid username and password</span>
+    <div><button type="submit" class="submit-btn" (click)="login($event)">Login</button></div>
+</form>

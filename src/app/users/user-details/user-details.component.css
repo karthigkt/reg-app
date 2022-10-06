@@ -1,0 +1,58 @@
+.table-container {
+  height: 500px;
+  overflow: auto;
+}
+
+#userTable {
+  border-collapse: collapse;
+  width: 100%;
+  max-height: 100px;
+  overflow: auto;
+}
+
+#userTable td,
+#userTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#userTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#userTable tr:hover {
+  background-color: #ddd;
+}
+
+#userTable th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #6c706f;
+  color: white;
+}
+
+.delete-btn {
+
+  left: 100px;
+  padding: 3px 10px;
+  top: 14px;
+  background: #f6e8e8;
+  border: 1px solid #de7a7a;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #d13333;
+  vertical-align: middle;
+}
+
+.delete-btn:hover {
+  background-color: #f8e2de;
+}
+.norecord-found {
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+.address span{
+  display: block;
+}

@@ -1,0 +1,117 @@
+.registration-form {
+    max-height: 470px;
+    overflow: auto;
+}
+
+.form-control {
+    display: block;
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(222 215 215);
+    border-radius: 4px;
+    outline: #b7b4bb;
+}
+
+.form-control::placeholder {
+    color: rgb(198, 191, 191);
+    font-size: 12px;
+
+}
+
+.address-title {
+    position: relative;
+    padding: 15px 0px;
+}
+
+.address-title input {
+    vertical-align: middle;
+}
+
+.address-title label {
+    padding: 0px 5px;
+    vertical-align: middle;
+}
+
+.address-block {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+}
+
+.delete-btn {
+
+    left: 100px;
+    padding: 3px 10px;
+    top: 14px;
+    background: #f6e8e8;
+    border: 1px solid #de7a7a;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #d13333;
+    vertical-align: middle;
+}
+
+.delete-btn:hover {
+    background-color: #f8e2de;
+}
+
+.default-error {
+    font-style: italic;
+    color: #d13333;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 40px;
+}
+
+.addAddress-btn {
+
+    padding: 7px 20px;
+    background: #effbee;
+    border: 1px solid #19c724;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #19c724;
+
+}
+
+.addAddress-btn:hover {
+    background-color: #d6f5e2;
+}
+
+.save-btn {
+    margin-left: 20px;
+    left: 180px;
+    padding: 7px 30px;
+    background: #f1f3ff;
+    border: 1px solid #1345b1;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #1345b1;
+}
+
+.save-btn:hover {
+    background-color: #d8defa;
+}
+
+.text-danger {
+    color: #d13333;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.mandatory {
+    color: #d13333;
+}
+
+.submit-success {
+    margin-left: 20px;
+    color: #19c724;
+}
